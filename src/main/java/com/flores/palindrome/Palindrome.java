@@ -21,8 +21,14 @@ public class Palindrome {
 		return true;
 	}
 	
+	/**
+	 * Clean out grammatical characters that should not
+	 * be considered.
+	 * @param wordOrSentence
+	 * @return character array read for eval
+	 */
 	private static char[] clean(String wordOrSentence) {
-		return wordOrSentence.replaceAll("[!?_ ,-.*&$]", "")
+		return wordOrSentence.replaceAll("[!?_ ,'-.*&$]", "")
 				.toLowerCase().toCharArray();
 	}
 }
